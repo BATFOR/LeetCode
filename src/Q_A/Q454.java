@@ -41,6 +41,10 @@ public class Q454 {
         return result;
     }
 
+    /**
+     *首相将AB数组结合放入mapAB，key代表两数之和，value代表key出现的次数。
+     * 然后，用同样方法将CD结合，把CD之间和的负数作为key在mapAB查询，若包含此key，则result += value。
+     */
     public int fourSumCount(int[] A, int[] B, int[] C, int[] D) {
         int result = 0;
         int length = A.length;
