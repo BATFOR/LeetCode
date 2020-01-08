@@ -6,4 +6,35 @@ package Q_A;
  * @description
  **/
 public class Q206 {
+	public ListNode reverseList(ListNode head) {
+		ListNode cur,prev,temp;
+		cur = head;
+		prev = null;
+		while(cur!=null){
+			temp = cur.next;
+			cur.next = prev;
+			prev = cur;
+			cur = temp;
+		}
+		return prev;
+	}
 }
+
+class ListNode {
+     int val;
+     ListNode next;
+     ListNode(int x) { val = x; }
+}
+
+/* 经典Python解法
+class Solution:
+		def reverseList(self, head):
+		"""
+		:type head: ListNode
+		:rtype: ListNode
+		"""
+		p, rev = head, None
+		while p:
+		rev, rev.next, p = p, rev, p.next
+		return rev
+*/
